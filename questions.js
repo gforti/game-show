@@ -99,7 +99,7 @@ module.exports = [
     answer: 'Hogmanay',
     note: '',
     time: 10,
-    lock: true
+    lock: false
   }
   ,
    {
@@ -108,7 +108,7 @@ module.exports = [
     choices: [
       "1908",
       "1925",
-      "1938",
+      "1968",
       "1938",
     ],
     answer: "1908",
