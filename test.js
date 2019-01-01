@@ -30,18 +30,19 @@ module.exports = [
   }
   ,
   {
-    question: "Why do the Chinese light firecrackers around the New Year?",
-    questionES: "¿Por qué los chinos encienden petardos alrededor del año nuevo?",
+    question: "Who is still sorry for 2004?",
+    questionES: "¿Quién todavía se disculpa por 2004?",
     choices: [
-      "To ward off evil spirits / Para alejar a los malos espíritus",
-      "To bring good luck / Para traer buena suerte",
-      "Simply to celebrate / Simplemente para celebrar",
-      "Because they Smell Good / Porque huelen bien",
+      "Ruben Studdard",
+      "George W. Bush",
+      "Mariah Carey",
+      "Steve Harvey",
     ],
-    answer: "To ward off evil spirits / Para alejar a los malos espíritus",
-    note: "",
+    answer: "Ruben Studdard",
+    note: '',
     time: 10,
     lock: false
   }
+  ,
 ];
 

@@ -52,7 +52,7 @@ module.exports = [
       "Pork / Cerdo",
     ],
     answer: "Lobster / Langosta",
-    note: '',
+    note: 'Because they move backwards / Porque se mueven hacia atrás.',
     time: 10,
     lock: false
   }
@@ -102,7 +102,7 @@ module.exports = [
     lock: false
   }
   ,
-   {
+  {
     question: "The first ball to be dropped in New York’s Times Square happened in what year?",
     questionES: "La primera bola que se dejó caer en el Times Square de Nueva York ocurrió en qué año?",
     choices: [
@@ -147,7 +147,79 @@ module.exports = [
     lock: false
   }
   ,
-
+  {
+    question: "Why do the Chinese light firecrackers around the New Year?",
+    questionES: "¿Por qué los chinos encienden petardos alrededor del año nuevo?",
+    choices: [
+      "To ward off evil spirits / Para alejar a los malos espíritus",
+      "To bring good luck / Para traer buena suerte",
+      "Simply to celebrate / Simplemente para celebrar",
+      "Because they Smell Good / Porque huelen bien",
+    ],
+    answer: "To ward off evil spirits / Para alejar a los malos espíritus",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+  {
+    question: "In Greece it is customary to smash an egg on doors to release good fortune for the coming year.",
+    questionES: "En Grecia, es costumbre aplastar un huevo en las puertas para liberar buena fortuna para el próximo año.",
+    choices: [
+      "True / Cierto",
+      "False / Falso",
+    ],
+    answer: "False / Falso",
+    note: 'Pomegranate / Granada',
+    time: 10,
+    lock: false
+  }
+  ,
+  {
+    question: "The first football 'bowl' game was played on January 1, 1902, but which 'bowl' was it?",
+    questionES: "El primer juego de fútbol 'bowl' se jugó el 1 de enero de 1902, pero ¿qué 'bowl' fue?",
+    choices: [
+      "Fiesta Bowl",
+      "Orange Bowl",
+      "Rose Bowl",
+      "Sugar Bowl",
+    ],
+    answer: "Rose Bowl",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+  {
+    question: "What percentage of Americans admit to falling asleep before midnight on New Year’s Eve?",
+    questionES: "¿Qué porcentaje de estadounidenses admiten quedarse dormidos antes de la medianoche en la víspera de Año Nuevo?",
+    choices: [
+      "9%",
+      "22%",
+      "46%",
+      "71%",
+    ],
+    answer: "22%",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+  {
+    question: "How long does the Time Square ball take to descent?",
+    questionES: "¿Cuánto tarda la bola de Time Square en descender?",
+    choices: [
+      "60 seconds / 60 segundos",
+      "30 seconds / 30 segundos",
+      "90 seconds / 90 segundos",
+      "10 seconds / 10 segundos",
+    ],
+    answer: "60 seconds / 60 segundos",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
 
 ];
 
