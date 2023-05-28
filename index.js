@@ -12,11 +12,14 @@ var port = process.env.PORT || 3000
 const host_ip = require('./host-ip')
 var gameUrl = `http://${host_ip}:${port}`
 
-let questions = require('./questions')
+let questionData = require('./questions')
+let questionsCategories = Object.keys(questionData)
+let questions = questionData[questionsCategories.at(0)]
 let testQuestions = require('./test')
 let currentTestQuestion = -1
 
 let data = {
+  questionsCategories,
   users: new Set(),
   buzzes: new Set(),
   first: '',
@@ -120,8 +123,9 @@ io.on('connection', (socket) => {
     clearBuzzers()
     data.currentQuestion = (data.currentQuestion + 1) % data.totalQuestions
     Object.assign(data, questions[data.currentQuestion])
-    if (data.choices.length > 2)
+    if (data.choices.length > 2) {
         data.choices = shuffle(data.choices)
+    }
     io.sockets.emit('question', Object.assign({}, getData()))
   })
 
@@ -213,6 +217,14 @@ io.on('connection', (socket) => {
   socket.on('skipTrack', () => {
     io.sockets.emit('skipTrack')
   })
+
+  socket.on('updateCategory', (topic) => {
+    questions = questionData[topic]
+    data.totalQuestions = questions.length
+    data.currentQuestion = -1
+    io.sockets.emit('categoryUpdate', Object.assign({}, getData()))
+  })
+
 
   socket.on('disconnect', () => {
     data.users.delete(socket.id)

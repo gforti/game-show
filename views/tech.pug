@@ -17,8 +17,9 @@ block content
         button.js-clear.btn='Clear buzzes'
 
         div.js-total-questions.total-questions Question
-            span=`${~~currentQuestion < 0 ? 0 : currentQuestion}`
-            =` / ${totalQuestions}`
+            span.js-currentQuestion=`${~~currentQuestion < 0 ? 0 : currentQuestion}`
+            =` / `
+            span.js-totalQuestions=`${totalQuestions}`
         input(name="curQ" type="number" value=`${~~currentQuestion < 0 ? 0 : currentQuestion}` min="1" max=totalQuestions required='required')
         div='Q Time : '
           span.timer-host 0
@@ -33,6 +34,9 @@ block content
         button.js-reveal.btn='Reveal Answer'
         button.js-score.btn='Score Board'
         button.js-skip-track.btn='Skip Track'
+        select.js-categories
+          - for (var x = 0; x < questionsCategories.length; x++)
+            option(value=questionsCategories[x]) #{questionsCategories[x]}
 
       div.js-view-question.view-question Question
       div.js-note.view-note Notes

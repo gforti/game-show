@@ -1,225 +1,420 @@
-module.exports = [
+module.exports = {
+
+"Historical Events":
+
+[
   {
-    question: "The New Year’s Eve ball was born out of a ban on what?",
-    questionES: "El baile de Nochevieja nació de una prohibición de qué?",
+    question: "Google was born this year.",
+    questionES: "Google nació este año.",
     choices: [
-      "Alcohol / Alcohol",
-      "Fireworks / Fuegos artificiales",
-      "Books / Libros",
-      "Child labor / Trabajo infantil",
+      "1997",
+      "1998",
+      "1992",
+      "1993",
     ],
-    answer: "Fireworks / Fuegos artificiales",
+    answer: "1998",
     note: '',
     time: 10,
     lock: false
   }
   ,
   {
-    question: "In Japan, eating long noodles on New Year’s is believed to guarantee you a long life.",
-    questionES: "En Japón, se cree que comer fideos largos en Año Nuevo le garantiza una larga vida.",
+    question: "In 1997, the first of seven books debuted, spawning a new universe.",
+    questionES: "En 1997, debutó el primero de siete libros, generando un nuevo universo.",
     choices: [
-      "True / Cierto",
-      "False / Falso",
+      "A Series of Unfortunate Events",
+      "Goosebumps",
+      "Harry Potter",
+      "The Magic School bus",
     ],
-    answer: "True / Cierto",
-    note: 'The goal is to eat them without breaking them. / El objetivo es comerlos sin romperlos.',
-    time: 10,
-    lock: false
-  }
-  ,
-  {
-    question: "Where is the celebration of the new year believed to have started in?",
-    questionES: "¿Dónde se cree que comenzó la celebración del nuevo año?",
-    choices: [
-      "Babylon / Babilonia",
-      "Israel",
-      "India",
-      "Jerusalem / Jerusalén",
-    ],
-    answer: "Babylon / Babilonia",
+    answer: "Harry Potter",
     note: '',
     time: 10,
     lock: false
   }
   ,
   {
-    question: "Superstitious folks avoid eating what food on New Year's Eve?",
-    questionES: "¿La gente supersticiosa evita comer qué comida en la víspera de Año Nuevo?",
+    question: "The Hubble Telescope is launched into space in this year",
+    questionES: "El Telescopio Hubble es lanzado al espacio en este año",
     choices: [
-      "Lobster / Langosta",
-      "Shrimp / Camarón",
-      "Steak / Filete",
-      "Pork / Cerdo",
+      "1990",
+      "1993",
+      "1994",
+      "1992",
     ],
-    answer: "Lobster / Langosta",
-    note: 'Because they move backwards / Porque se mueven hacia atrás.',
-    time: 10,
-    lock: false
-  }
-  ,
-  {
-    question: "What percentage of Americans say a prayer on New Year’s Eve?",
-    questionES: "¿Qué porcentaje de estadounidenses dicen una oración en la víspera de Año Nuevo?",
-    choices: [
-      "5%",
-      "61%",
-      "23%",
-      "85%",
-    ],
-    answer: "61%",
+    answer: "1990",
     note: '',
     time: 10,
     lock: false
   }
   ,
   {
-    question: "What fruit do New Year's Eve celebrators in Spain eat at midnight?",
-    questionES: "¿Qué fruta comen los madrugadores de la Nochevieja en España?",
+    question: "In 1994, who became the first President of South Africa after being elected in the country's first multi-racial elections?",
+    questionES: "En 1994, ¿quién se convirtió en el primer presidente de Sudáfrica después de ser elegido en las primeras elecciones multirraciales del país?",
     choices: [
-      "Oranges / Naranjas",
-      "Apples / Manzanas",
-      "Pears / Peras",
-      "Grapes / Uvas",
+      "Thabo Mbeke",
+      "Nelson Mandela",
+      "Fredrik Willem de Klerk",
+      "P. W. Botha",
     ],
-    answer: "Grapes / Uvas",
+    answer: "Nelson Mandela",
     note: '',
     time: 10,
     lock: false
   }
   ,
   {
-    question: "What do the Scottish call New Year's Eve?",
-    questionES: "¿Cómo llaman los escoceses la víspera del año nuevo?",
+    question: "The Internet becomes available for unrestricted commercial use this year.",
+    questionES: "Internet estará disponible para uso comercial sin restricciones este año.",
     choices: [
-      'Candlemas Day',
-      'Hogmanay',
-      'Whuppity Scoorie',
-      'Burns Night',
+      "1997",
+      "1999",
+      "1994",
+      "1991",
     ],
-    answer: 'Hogmanay',
+    answer: "1991",
     note: '',
     time: 10,
     lock: false
   }
   ,
   {
-    question: "The first ball to be dropped in New York’s Times Square happened in what year?",
-    questionES: "La primera bola que se dejó caer en el Times Square de Nueva York ocurrió en qué año?",
+    question: "Who performed at the 1993 Superbowl?",
+    questionES: "¿Quién actuó en el Superbowl de 1993?",
     choices: [
-      "1908",
-      "1925",
-      "1968",
-      "1938",
+      "Gloria Estefan",
+      "Diana Ross",
+      "Michael Jackson",
+      "Boyz II Men",
     ],
-    answer: "1908",
+    answer: "Michael Jackson",
     note: '',
     time: 10,
     lock: false
   }
   ,
   {
-    question: "Where is the largest New Year's Eve celebration held?",
-    questionES: "¿Dónde se lleva a cabo la celebración más grande de la víspera de Año Nuevo?",
+    question: "OJ Simpson was involved in a high speed pursuit this year.",
+    questionES: "OJ Simpson estuvo involucrado en una persecución a alta velocidad este año.",
     choices: [
-      "Sydney, Australia",
-      "Times Square, New York City",
-      "Copacabana Beach, Rio de Janeiro",
-      "Hong Kong, China",
+      '1994',
+      '1995',
+      '1993',
+      '1996',
     ],
-    answer: "Copacabana Beach, Rio de Janeiro",
-    note: 'Times Square is only half a million people. Rio de Janeiro has 2 million people on its Copacabana Beach celebration / Times Square es solo medio millón de personas. Río de Janeiro tiene 2 millones de personas en su celebración en la playa de Copacabana',
-    time: 10,
-    lock: false
-  }
-  ,
-  {
-    question: "Who first recognized January 1st as the beginning of the New Year?",
-    questionES: "¿Quién reconoció por primera vez el 1 de enero como el comienzo del Año Nuevo?",
-    choices: [
-      "The Egyptians / Los egipcios",
-      "The Romans / Los romanos",
-      "Columbus / Colón",
-      "The Kardashians / Los Kardashians",
-    ],
-    answer: "The Romans / Los romanos",
+    answer: '1994',
     note: '',
     time: 10,
     lock: false
   }
   ,
   {
-    question: "Why do the Chinese light firecrackers around the New Year?",
-    questionES: "¿Por qué los chinos encienden petardos alrededor del año nuevo?",
+    question: "Name the location of the 1992 Olympics",
+    questionES: "Nombra la ubicación de los Juegos Olímpicos de 1992",
     choices: [
-      "To ward off evil spirits / Para alejar a los malos espíritus",
-      "To bring good luck / Para traer buena suerte",
-      "Simply to celebrate / Simplemente para celebrar",
-      "Because they Smell Good / Porque huelen bien",
+      "Athens, Greece",
+      "Barcelona, Spain",
+      "Rome, Italy",
+      "Atlanta GA, USA",
     ],
-    answer: "To ward off evil spirits / Para alejar a los malos espíritus",
-    note: "",
+    answer: "Barcelona, Spain",
+    note: '',
     time: 10,
     lock: false
   }
   ,
   {
-    question: "In Greece it is customary to smash an egg on doors to release good fortune for the coming year.",
-    questionES: "En Grecia, es costumbre aplastar un huevo en las puertas para liberar buena fortuna para el próximo año.",
+    question: "Name the 2 sets of years that Michael Jordan and the Chicago Bulls \"3-peated\"",
+    questionES: "Nombra los 2 conjuntos de años que Michael Jordan y los Chicago Bulls \"3-peated\"",
     choices: [
-      "True / Cierto",
-      "False / Falso",
+      "1987-1990, 1993-1995",
+      "1990-1992, 1994-1996",
+      "1994-1996, 1999-2002",
+      "1992-1994, 1996-1998",
     ],
-    answer: "False / Falso",
-    note: 'Pomegranate / Granada',
-    time: 10,
-    lock: false
-  }
-  ,
-  {
-    question: "The first football 'bowl' game was played on January 1, 1902, but which 'bowl' was it?",
-    questionES: "El primer juego de fútbol 'bowl' se jugó el 1 de enero de 1902, pero ¿qué 'bowl' fue?",
-    choices: [
-      "Fiesta Bowl",
-      "Orange Bowl",
-      "Rose Bowl",
-      "Sugar Bowl",
-    ],
-    answer: "Rose Bowl",
-    note: "",
-    time: 10,
-    lock: false
-  }
-  ,
-  {
-    question: "What percentage of Americans admit to falling asleep before midnight on New Year’s Eve?",
-    questionES: "¿Qué porcentaje de estadounidenses admiten quedarse dormidos antes de la medianoche en la víspera de Año Nuevo?",
-    choices: [
-      "9%",
-      "22%",
-      "46%",
-      "71%",
-    ],
-    answer: "22%",
-    note: "",
-    time: 10,
-    lock: false
-  }
-  ,
-  {
-    question: "How long does the Time Square ball take to descent?",
-    questionES: "¿Cuánto tarda la bola de Time Square en descender?",
-    choices: [
-      "60 seconds / 60 segundos",
-      "30 seconds / 30 segundos",
-      "90 seconds / 90 segundos",
-      "10 seconds / 10 segundos",
-    ],
-    answer: "60 seconds / 60 segundos",
-    note: "",
+    answer: "1992-1994, 1996-1998",
+    note: '',
     time: 10,
     lock: false
   }
   ,
 
-];
+],
+
+"TV Shows" : [
+  {
+    question: "There were two lead characters in this 90's cartoon... one was a genius, the other insane",
+    questionES: "Había dos personajes principales en esta caricatura de los 90... uno era un genio, el otro loco",
+    choices: [
+      "Animaniacs",
+      "Ren and Stimpy",
+      "The Wild Thornberries",
+      "The Powerpuff Girls",
+    ],
+    answer: "Ren and Stimpy",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+  {
+    question: "Name the song Carlton from Fresh Prince would dance to",
+    questionES: "Nombra la canción que bailaría Carlton de Fresh Prince",
+    choices: [
+      "Livin for the City by Stevie Wonder",
+      "Let’s Stay Together by Al Green",
+      "It's Not Unusual by Gordon Mills and Les Reed",
+      "The Love You Save by The Jackson 5"
+    ],
+    answer: "It's Not Unusual by Gordon Mills and Les Reed",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+  {
+    question: "When entering the Urkel Transformation Chamber, Steve Urkel would transform into this alter ego",
+    questionES: "Al entrar en la Cámara de Transformación de Urkel, Steve Urkel se transformaría en este alter ego",
+    choices: [
+      "Stefan Urquelle",
+      "Stephen Urkel",
+      "Stephanie Urkel",
+      "Steve Rogers"
+    ],
+    answer: "Stefan Urquelle",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+  {
+    question: "How many seasons of Seinfeld were there?",
+    questionES: "¿Cuántas temporadas de Seinfeld hubo?",
+    choices: [
+      "10",
+      "6",
+      "8",
+      "9",
+    ],
+    answer: "9",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+  {
+    question: "Name the extra ingredient Professor Utonium added to create the PowerPuff Girls",
+    questionES: "Nombra el ingrediente adicional que el profesor Utonium agregó para crear las Chicas Superpoderosas",
+    choices: [
+      "Bacteria X",
+      "Chemical X",
+      "Chemical Y",
+      "Bacteria Y"
+    ],
+    answer: "Chemical X",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+  {
+    question: "In Friends, which character hates Thanksgiving?",
+    questionES: "En Friends, ¿qué personaje odia el Día de Acción de Gracias?",
+    choices: [
+      "Joey",
+      "Ross",
+      "Chandler",
+      "Phoebe",
+    ],
+    answer: "Chandler",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+  {
+    question: "What is the high school that the students attend in Saved by the Bell?",
+    questionES: "¿Cuál es la escuela secundaria a la que asisten los estudiantes en Salvados por la campana?",
+    choices: [
+      "Bellevue High School",
+      "Belleville High School",
+      "Bayside High School",
+      "Bayview High School",
+    ],
+    answer: "Bayside High School",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+  {
+    question: "In which fictional city is Buffy the Vampire Slayer located?",
+    questionES: "¿En qué ciudad ficticia se encuentra Buffy, la cazavampiros?",
+    choices: [
+      "Nightingale",
+      "Sunnydale",
+      "Sunnyview",
+      "Tombstone",
+    ],
+    answer: "Sunnydale",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+  {
+    question: "Which 90’s cartoon character’s catchphrase is \"Eat my shorts\"?",
+    questionES: "¿Qué eslogan de un personaje de dibujos animados de los 90 es \"Cómete mis pantalones cortos\"?",
+    choices: [
+      "Bart Simpson",
+      "Doug Funnie",
+      "Wakko Warner",
+      "Arnold Shortman"
+    ],
+    answer: "Bart Simpson",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+],
+
+"Movies": [
+  {
+    question: "James Cameron’s 1997 mega blockbluster hit was the first to reach two billion.",
+    questionES: "El megaéxito de James Cameron en 1997 fue el primero en alcanzar los dos mil millones.",
+    choices: [
+      "Star Wars Episode 1: The Phantom Menace",
+      "Independence Day",
+      "Jurassic Park",
+      "Titanic",
+    ],
+    answer: "Titanic",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+  {
+    question: "What is the name of the island that Jurassic Park is set in?",
+    questionES: "",
+    choices: [
+      "Skull Island",
+      "Isla Nublar",
+      "Shutter Island",
+      "Isla de Gracia",
+    ],
+    answer: "Isla Nublar",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+  {
+    question: "What pill did Neo in The Matrix take?",
+    questionES: "¿Qué pastilla tomó Neo en The Matrix?",
+    choices: [
+      "Red Pill",
+      "Blue Pill",
+    ],
+    answer: "Red Pill",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+  {
+    question: "What is the highest grossing animated film of the 90’s?",
+    questionES: "¿Cuál es la película de animación más taquillera de los 90?",
+    choices: [
+      "Space Jam",
+      "The Prince of Egypt",
+      "The Lion King",
+      "Beauty and the Beast",
+    ],
+    answer: "The Lion King",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+  {
+    question: "Which movie did Robin Williams star in that featured a magical board game?",
+    questionES: "¿Qué película protagonizó Robin Williams que presentaba un juego de mesa mágico?",
+    choices: [
+      "Jumanji",
+      "Zathura",
+      "Jumanji: The Next Level",
+      "Jumanji: Welcome to the Jungle"
+    ],
+    answer: "Jumanji",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+  {
+    question: "Who was the James Bond of the 90’s?",
+    questionES: "¿Quién fue el James Bond de los 90?",
+    choices: [
+      "Timothy Dalton",
+      "Roger Moore",
+      "Sean Connery",
+      "Pierce Brosnan"
+    ],
+    answer: "Pierce Brosnan",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+  {
+    question: "Finish this quote: My momma always said...",
+    questionES: "Termina esta cita: Mi mamá siempre decía...",
+    choices: [
+      "...life is like a box of chocolates, you sure never know what you are gonna get.",
+      "...life is like a box of chocolates, you never know what you’re gonna get.",
+      "...life was like a box of chocolates, you never know what you’re gonna get.",
+      "...life was like a box of chocolates, you never do know what you are going to get.",
+    ],
+    answer: "",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+  {
+    question: "What famous Whitney Houston song is featured in \"The Bodyguard\"?",
+    questionES: "¿Qué famosa canción de Whitney Houston aparece en \"The Bodyguard\"?",
+    choices: [
+      "I Have Nothing",
+      "I Will Always Love You",
+      "Run To You",
+      "I Wanna Dance With Somebody"
+    ],
+    answer: "I Will Always Love You",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+  {
+    question: "What song is featured in the movie \"Ghost\"?",
+    questionES: "¿Qué canción aparece en la película \"Ghost\"?",
+    choices: [
+      "Unchained Love",
+      "Unbridled Love",
+      "Unrestrained Melody",
+      "Unchained Melody"
+    ],
+    answer: "Unchained Melody",
+    note: "",
+    time: 10,
+    lock: false
+  }
+  ,
+]
+
+
+}
 

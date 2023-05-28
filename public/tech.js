@@ -16,9 +16,11 @@ const scoreDivDisplay = document.querySelector('.js-display-scores')
 const soundFX = document.querySelector('.js-fx')
 const introMusic = document.querySelector('.js-intro-music')
 const showdownMusic = document.querySelector('.js-showdown-music')
-const currentQuestionNumber = document.querySelector('.js-total-questions span')
+const currentQuestionNumber = document.querySelector('.js-currentQuestion')
+const $totalQuestions = document.querySelector('.js-totalQuestions')
 const timer = document.querySelector('.timer-host')
 const $skipTrack = document.querySelector('.js-skip-track')
+const $questionsCategories = document.querySelector('.js-categories')
 
 const answers = document.querySelector('.js-answers')
 const choices = document.querySelector('.js-choices')
@@ -101,6 +103,11 @@ testQuestion.addEventListener('click', showTestQuestion)
 scoreBtn.addEventListener('click', showScores)
 $skipTrack.addEventListener('click', skipTrack)
 
+$questionsCategories.addEventListener('change', () => {
+  const val = $questionsCategories.options[$questionsCategories.selectedIndex].value
+  socket.emit('updateCategory', val)
+})
+
 scoreDivClose.addEventListener('click', ()=>{
     scoreDiv.classList.add('hidden')
 })
@@ -114,7 +121,6 @@ scoreDivClear.addEventListener('click', ()=>{
 })
 
 function skipTrack() {
-  console.log('skiptrack')
   socket.emit('skipTrack')
 }
 
@@ -271,6 +277,14 @@ socket.on('sayAnswerShown', (item) => {
 
 socket.on('unLockLogo', () => {
    logo.disabled = false
+})
+
+socket.on('categoryUpdate', (data) => {
+
+  currQuestion.setAttribute('max', data.totalQuestions)
+  $totalQuestions.innerHTML = data.totalQuestions
+  currentQuestionNumber.innerHTML = ~~data.currentQuestion+1
+  currQuestion.value = ~~data.currentQuestion+1
 })
 
 socket.on('score', (answer, data) => {
