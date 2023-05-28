@@ -18,6 +18,7 @@ const introMusic = document.querySelector('.js-intro-music')
 const showdownMusic = document.querySelector('.js-showdown-music')
 const currentQuestionNumber = document.querySelector('.js-total-questions span')
 const timer = document.querySelector('.timer-host')
+const $skipTrack = document.querySelector('.js-skip-track')
 
 const answers = document.querySelector('.js-answers')
 const choices = document.querySelector('.js-choices')
@@ -98,6 +99,7 @@ reveal.addEventListener('click', revealAnswer)
 question.addEventListener('click', showQuestion)
 testQuestion.addEventListener('click', showTestQuestion)
 scoreBtn.addEventListener('click', showScores)
+$skipTrack.addEventListener('click', skipTrack)
 
 scoreDivClose.addEventListener('click', ()=>{
     scoreDiv.classList.add('hidden')
@@ -110,6 +112,11 @@ scoreDivClear.addEventListener('click', ()=>{
         showScores()
     }
 })
+
+function skipTrack() {
+  console.log('skiptrack')
+  socket.emit('skipTrack')
+}
 
 function revealAnswer(){
     socket.emit('lock', '')

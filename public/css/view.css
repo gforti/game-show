@@ -3,8 +3,9 @@ body {
     background-color: #000;
     color: whitesmoke;
     font-family: sans-serif;
-    background-image: url('1F1F1F-128.png');
-    background-repeat: repeat;
+    background-image: url('90sbg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow: hidden;
 }
 
@@ -75,14 +76,17 @@ body {
     text-align: center;
     animation: colors 1s ease infinite alternate;
     background: linear-gradient(324deg, #1b2038, #514d94, #df4026, #d9c83d);
-    background-size: 800% 800%;
+    background-image: url('carlton.gif');
+    background-repeat: repeat;
+
+
     animation: introColors 30s ease infinite;
 }
 
 .subtitle {
    color: goldenrod;
    text-shadow: 0 1px 0 black;
-
+    font-size: 3rem;
 }
 
 
@@ -109,6 +113,7 @@ body {
     margin: 2vw;
     padding-top: 1vw;
     color: #FAC863;
+    background-color: rgba(0,0,0,.9);
 }
 
 .view-question .es {

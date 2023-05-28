@@ -42,7 +42,7 @@ showdownTrack.addEventListener('ended',()=>{
     showdownTrack.play()
 })
 let tracks = [];
-for (let i = 3; i <= 3; i++)
+for (let i = 3; i <= 4; i++)
 tracks.push(new Audio(`tracks/track${i}.mp3`))
 
 // tracks.sort(function() {return 0.5 - Math.random()})
@@ -51,8 +51,9 @@ let currentTrack = 0
 let allTracks = x = tracks.length
 
 while (x--) {
-    tracks[x].addEventListener('ended',playNextTrack)
+    //tracks[x].addEventListener('ended',playNextTrack)
     tracks[x].volume = 0.1
+    tracks[x].loop = true
 }
 
 
@@ -235,6 +236,10 @@ socket.on('soundFXToggle', (soundFX) => {
 socket.on('selectionToggle', (data) => {
     if ( !data.allowSelection )
         highlightChoice(null)
+})
+
+socket.on('skipTrack', () => {
+  playNextTrack()
 })
 
 
@@ -451,8 +456,10 @@ function playTrack() {
 }
 
 function playNextTrack() {
-     currentTrack = (currentTrack + 1) % allTracks
-     playTrack()
+    stopTrack()
+    tracks[currentTrack].currentTime = 0
+    currentTrack = (currentTrack + 1) % allTracks
+    playTrack()
 }
 
 function setMusicVolume(musicVol) {

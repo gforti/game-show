@@ -28,7 +28,7 @@ p {
 
 
 
-header {  
+header {
   background-color: #fff;
   color: #000;
   font-size: 5.5vw;
@@ -39,14 +39,14 @@ header.host {
      font-size: 1.5vw;
 }
 
-.logo { 
+.logo {
   max-width: 200px;
   width: 100%;
 }
 
 .container {
   margin: 0 auto;
-  padding: 1em;  
+  padding: 1em;
   width: 100%;
 }
 
@@ -56,8 +56,8 @@ button {
   border: 0;
   border-radius: 3px;
   display: block;
-  padding: 0.6em 0em;  
-  width: 100%;  
+  padding: 0.6em 0em;
+  width: 100%;
 }
 
 button {
@@ -77,19 +77,19 @@ button:active {
 }
 
 button:focus {
-  outline: none;  
+  outline: none;
 }
 
 .buzzer {
   height: 20rem;
   font-size: 3rem;
   border-radius: 50%;
-  background: linear-gradient(to bottom, #b01e1e 0%, red 100%);  
+  background: linear-gradient(to bottom, #b01e1e 0%, red 100%);
   text-shadow: 0 5px 2px rgba(122,17,8,.8);
   box-shadow: 0 18px 0 rgb(183,9,0);
   font-weight: 900;
   letter-spacing: 0.3rem;
-  outline: none;     
+  outline: none;
   max-width: 20rem;
   margin-left: auto;
   margin-right: auto;
@@ -119,14 +119,14 @@ button:focus {
 }
 
 
-input:required:invalid, 
+input:required:invalid,
 select:required:invalid,
 textarea:required:invalid
 {
   border: 2px solid red;
 }
 
-input:required:valid, 
+input:required:valid,
 select:required:valid,
 textarea:required:valid
 {
@@ -147,24 +147,24 @@ textarea:required:valid
 .start,
 .pause,
 .btn {
-    
-   
-    
+
+
+
 }
 
 
 .actions,
 .actions-host {
     display: grid;
-    grid-template-columns: repeat( 5, 1fr);
+    grid-template-columns: repeat( 6, 1fr);
     grid-row-gap:    1vw;
     grid-column-gap: 2vw;
-    font-size: 1vw;    
+    font-size: 1vw;
 }
 
 .actions-host {
     grid-template-columns: repeat( 4, 1fr);
-    font-size: 1.5vw;    
+    font-size: 1.5vw;
 }
 
 .actions {
@@ -187,13 +187,13 @@ input[type="range"]
 {
     -webkit-appearance: none;
     height: 10px;
-    border-radius: 5px;   
+    border-radius: 5px;
     background: #ddd;
     outline: none;
     margin-top: auto;
     margin-bottom: auto;
     width: 90%;
-  
+
 }
 
 input[type="range"]::after
@@ -241,7 +241,7 @@ input[type="range"]::-webkit-slider-thumb {
     appearance: none;
     width: 30px;
     height: 30px;
-    border-radius: 50%; 
+    border-radius: 50%;
     background: lime;
     cursor: pointer;
 }
@@ -252,7 +252,7 @@ input[type="range"]::-webkit-slider-thumb {
     margin: 0.5rem;
     padding: 2rem 0;
     text-shadow: 5px 5px 5px black;
-    border: 6px solid limegreen;    
+    border: 6px solid limegreen;
     outline: none;
 }
 
@@ -300,43 +300,43 @@ input[type="submit"][disabled]:hover
 
 
 
- 
+
  .js-lock {
      font-size: 4.5vw;
  }
- 
- 
- 
+
+
+
  ul.view-answers  {
     display: grid;
-    font-size: 3vw;    
+    font-size: 3vw;
     grid-row-gap:    1vw;
     grid-column-gap: 5vh;
     list-style-type: upper-alpha;
     padding: 0;
     margin: 0;
-    
+
 }
 
 ul.view-answers li  {
-    
+
     margin-left: 5vw;
     font-family: sans-serif;
     font-weight: bold;
     border: 2px solid #FAC863;
     border-radius: 5px;
-    
-    
-    text-transform: capitalize;  
-    
+
+
+    text-transform: capitalize;
+
     background-color: #3474ad;
     border-color: #dae0e6;
     color: #dae0e6;
-  
+
 }
 
 ul.view-answers.buzz li  {
-    
+
     background-color: transparent;
     border-color: transparent;
     color: #f1c40f;
@@ -346,7 +346,7 @@ ul.view-answers.buzz li  {
 
 
 ul.view-answers.buzz li label  {
-    
+
     color: #f8f7f7;
     cursor: default;
 }
@@ -370,7 +370,7 @@ ul.view-answers li:nth-child(2) {
     background-color: #9e3844;
     border-color: #EC5F67;
     color: #9e3844;
-    
+
 }
 
 ul.view-answers li:nth-child(3) {
@@ -383,7 +383,7 @@ ul.view-answers li:nth-child(4) {
     background-color: #7e5495;
     border-color: #C594C5;
     color: #7e5495;
-    
+
 }
 */
 
@@ -404,13 +404,13 @@ ul.view-answers li:nth-child(4) {
         cursor: pointer;
  }
 
-          
+
 .js-choices input[type=radio]:checked + label {
-    
+
     background-color: #fbc33b;
     color: #333;
  }
- 
+
  li.highlight {
     background-color: #fbc33b;
 }
@@ -438,7 +438,7 @@ li.highlight span {
 .view-question {
     font-size: 4vw;
     text-align: center;
-    margin: 1vw;    
+    margin: 1vw;
 }
 
  ul.view-answers.host {
@@ -456,7 +456,7 @@ li.highlight span {
     list-style-type: upper-alpha;
     padding: 0;
     margin: 0;
-    
+
 }
 
  li.view-answers.host {
@@ -470,7 +470,7 @@ li.highlight span {
     border-radius: 5px;
     border-left-width: 10px;
     background-color: #a7883d;
-    text-transform: capitalize;   
+    text-transform: capitalize;
     font-weight: bold;
 }
 */
@@ -532,7 +532,7 @@ div.show-scores button.btn {
 }
 
 .display-scores {
-   
+
     justify-content: center;
     align-items: center;
 }
@@ -544,12 +544,12 @@ div.show-scores button.btn {
 }
 
 .display-scores div p {
-    margin: 0.2em 0;  
+    margin: 0.2em 0;
     font-weight: bold;
 }
 
 .display-scores div p:nth-child(1) {
-    
+
     color: #552900;
 }
 
@@ -565,25 +565,25 @@ div.show-scores button.btn {
     background-color: #713C03;
 }
 
-.display-scores div:last-child p:nth-child(1) {    
+.display-scores div:last-child p:nth-child(1) {
     color: white;
 }
 
-@media screen 
+@media screen
   and (max-device-width: 800px) {
-  
+
     body,
     input,
     button {
       font-size: 4.5vw;
     }
-    
-    button, 
+
+    button,
     .view-question {
         font-size: 6.5vw;
     }
-          
-    
+
+
     .js-lock {
         font-size: 2vw;
     }
@@ -592,39 +592,39 @@ div.show-scores button.btn {
     .js-choices input[type=radio] + label{
         font-size: 6vw;
     }
-    
+
     h2 {
         font-size: 4vw;
         margin: 0.4rem;
     }
-    
+
     ol {
         font-size: 4vw;
     }
-    
+
     .btn {
         font-size: 2vw;
     }
-    
+
     ul.view-answers.host,
     li.view-answers.host {
         font-size: 6vw;
-        
+
     }
     p {
         margin: 1em 0;
     }
-    
+
     body > div.container.host > div.view-question,
     body > div.container.host > div.notes,
     body > div.container.host > div.js-answers > div > ul > li > label
     {
         /* font-size: 1rem !important; */
     }
-      
+
 }
 
-@media screen  
+@media screen
   and (orientation: landscape) {
 
     ul.view-answers {
@@ -644,11 +644,11 @@ div.show-scores button.btn {
        padding-left: 1vw;
        font-family: sans-serif;
        font-weight: bold;
-      
+
        border-radius: 5px;
        background-color: #a7883d;
-       text-transform: capitalize;   
+       text-transform: capitalize;
        font-weight: bold;
    }
-   
+
   }

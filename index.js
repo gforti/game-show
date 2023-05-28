@@ -210,6 +210,10 @@ io.on('connection', (socket) => {
     data.currentQuestion = num
   })
 
+  socket.on('skipTrack', () => {
+    io.sockets.emit('skipTrack')
+  })
+
   socket.on('disconnect', () => {
     data.users.delete(socket.id)
     io.emit('active', [...data.users].length)
