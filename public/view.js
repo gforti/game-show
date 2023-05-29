@@ -29,26 +29,32 @@ let s_30sec = new Audio(`timer/30sec.mp3`)
 let s_60sec = new Audio(`timer/60sec.mp3`)
 
 
-let introTrack = new Audio(`tracks/intro.mp3`)
-let introTrack2 = new Audio(`tracks/intro2.mp3`)
+let introTrack = []
+for (let i = 1; i <= 3; i++)
+introTrack.push(new Audio(`tracks/intro${i}.mp3`))
+
+introTrack.forEach(track => {
+  track.addEventListener('ended',()=>{
+    socket.emit('introTrackEnded')
+  })
+  track.volume = 0.1
+})
+
+let currentIntroTrack = 0
+let allIntroTracks = x = introTrack.length
+
+
 let showdownTrack = new Audio(`tracks/showdown.mp3`)
 let pauseShowdownMusic = true
 
-introTrack.volume = 0.1
-introTrack.addEventListener('ended',()=>{
-    socket.emit('introTrackEnded')
-})
-introTrack2.volume = 0.1
-introTrack2.addEventListener('ended',()=>{
-    socket.emit('introTrack2Ended')
-})
+
 showdownTrack.volume = 0.1
 showdownTrack.addEventListener('ended',()=>{
     showdownTrack.currentTime = 0
     showdownTrack.play()
 })
 let tracks = [];
-for (let i = 3; i <= 4; i++)
+for (let i = 3; i <= 5; i++)
 tracks.push(new Audio(`tracks/track${i}.mp3`))
 
 // tracks.sort(function() {return 0.5 - Math.random()})
@@ -128,6 +134,9 @@ socket.on('question', (data) => {
 socket.on('setBG', (bgClass) => {
   document.body.classList.remove(...document.body.classList)
   document.body.classList.add(bgClass)
+
+  const num = (bgClass.match(/\d/g).at(0) - 1)
+  setIntroTrack(num)
 })
 
 
@@ -142,7 +151,7 @@ function prepareQuestion(data) {
     clearTimeout(questionReadyTimer)
     clearTimeout(showCorrectAnswerTimer)
 
-    introTrack.pause()
+    introTrack[currentIntroTrack].pause()
     pauseTimerMusic()
     showBuzzTeam = true
     info.classList.remove('info-display')
@@ -216,12 +225,12 @@ function playMusic() {
     }
 }
 
-socket.on('introMusicToggle', (musicStop) => {
+socket.on('introMusicToggle', (musicStop, track) => {
     if (musicStop) {
-        introTrack.pause()
+        introTrack[currentIntroTrack].pause()
         introTrack.currentTime = 0
     } else {
-        introTrack.play()
+        introTrack[currentIntroTrack].play()
     }
 })
 
@@ -252,6 +261,10 @@ socket.on('skipTrack', () => {
   playNextTrack()
 })
 
+socket.on('skipIntroTrack', () => {
+  console.log('skip intro')
+  playNextIntroTrack()
+})
 
 
 function displayChoices(data) {
@@ -472,8 +485,26 @@ function playNextTrack() {
     playTrack()
 }
 
+function playNextIntroTrack() {
+  const num  = (currentIntroTrack + 1) % allIntroTracks
+  setIntroTrack(num)
+}
+
+function setIntroTrack(num) {
+  if(num >= 0 && num < allIntroTracks) {
+    currentIntroTrack = num
+    introTrack.forEach(track => {
+      track.pause()
+      track.currentTime = 0
+    })
+    introTrack[currentIntroTrack].play()
+  }
+}
+
 function setMusicVolume(musicVol) {
-    introTrack.volume = musicVol
+    introTrack.forEach(track => {
+      track.volume = musicVol
+    })
     showdownTrack.volume = musicVol
     tracks.forEach((track) => {
         track.volume = musicVol

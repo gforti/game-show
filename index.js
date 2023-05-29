@@ -223,6 +223,10 @@ io.on('connection', (socket) => {
     io.sockets.emit('skipTrack')
   })
 
+  socket.on('skipIntroTrack', () => {
+    io.sockets.emit('skipIntroTrack')
+  })
+
   socket.on('updateCategory', (topic) => {
     questions = questionData[topic]
     data.totalQuestions = questions.length

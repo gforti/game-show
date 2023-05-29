@@ -11,6 +11,7 @@ block content
         div.js-active=`${users.length} joined`
         button.js-logo.btn='Logo'
         button.js-intro-music.btn(class={'is-paused': pauseIntroMusic})='Intro Music'
+        button.js-skip-intro-track.btn='Skip Intro Track'
         button.js-music.btn(class={'is-paused': pauseMusic})='Music Toggle'
         button.js-showdown-music.btn(class={'is-paused': pauseShowdownMusic})='Showdown Music'
         button.js-fx.btn(class={'is-paused': pauseSoundFX})='Sound FX Toggle'
@@ -29,16 +30,16 @@ block content
 
 
         button.js-test-question.btn='Test Question'
-        button.pause.btn(class={'is-paused': pauseTime})='Pause Timer'
         button.js-question.btn='Show Question'
+        button.pause.btn(class={'is-paused': pauseTime})='Pause Timer'
         button.js-reveal.btn='Reveal Answer'
         button.js-score.btn='Score Board'
         button.js-skip-track.btn='Skip Track'
+        button.js-buzz-team-1.btn='Buzz Team 1'
+        button.js-buzz-team-2.btn='Buzz Team 2'
         select.js-categories
           - for (var x = 0; x < questionsCategories.length; x++)
             option(value=questionsCategories[x]) #{questionsCategories[x]}
-        button.js-buzz-team-1.btn='Buzz Team 1'
-        button.js-buzz-team-2.btn='Buzz Team 2'
         select.js-backgrounds
           - for (var x = 0; x < siteBackgrounds.length; x++)
             option(value=siteBackgrounds[x]) #{siteBackgrounds[x]}
