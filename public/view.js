@@ -30,11 +30,17 @@ let s_60sec = new Audio(`timer/60sec.mp3`)
 
 
 let introTrack = new Audio(`tracks/intro.mp3`)
+let introTrack2 = new Audio(`tracks/intro2.mp3`)
 let showdownTrack = new Audio(`tracks/showdown.mp3`)
 let pauseShowdownMusic = true
+
 introTrack.volume = 0.1
 introTrack.addEventListener('ended',()=>{
     socket.emit('introTrackEnded')
+})
+introTrack2.volume = 0.1
+introTrack2.addEventListener('ended',()=>{
+    socket.emit('introTrack2Ended')
 })
 showdownTrack.volume = 0.1
 showdownTrack.addEventListener('ended',()=>{
@@ -112,12 +118,16 @@ socket.on('intro', () => {
     questionClose(false)
     intro.classList.remove('hidden')
     container.classList.add('hidden')
-
 })
 
 socket.on('question', (data) => {
 
     prepareQuestion(data)
+})
+
+socket.on('setBG', (bgClass) => {
+  document.body.classList.remove(...document.body.classList)
+  document.body.classList.add(bgClass)
 })
 
 

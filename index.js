@@ -33,7 +33,8 @@ let data = {
   questionReady: false,
   isTestQuestion: false,
   musicVol: 0.1,
-  timerVol: 0.1
+  timerVol: 0.1,
+  siteBackgrounds: ['bg1', 'bg2', 'bg3']
 }
 
 data.totalQuestions = questions.length
@@ -154,6 +155,10 @@ io.on('connection', (socket) => {
 
   socket.on('selection', (choice) => {
     io.sockets.emit('answerSelected', choice)
+  })
+
+  socket.on('setIntroBg', (bgClass) => {
+    io.sockets.emit('setBG', bgClass)
   })
 
   socket.on('lock', (answerChosen) => {

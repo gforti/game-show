@@ -21,6 +21,7 @@ const $totalQuestions = document.querySelector('.js-totalQuestions')
 const timer = document.querySelector('.timer-host')
 const $skipTrack = document.querySelector('.js-skip-track')
 const $questionsCategories = document.querySelector('.js-categories')
+const $backgrounds = document.querySelector('.js-backgrounds')
 const $buzzTeam1 = document.querySelector('.js-buzz-team-1')
 const $buzzTeam2 = document.querySelector('.js-buzz-team-2')
 
@@ -115,6 +116,11 @@ $skipTrack.addEventListener('click', skipTrack)
 $questionsCategories.addEventListener('change', () => {
   const val = $questionsCategories.options[$questionsCategories.selectedIndex].value
   socket.emit('updateCategory', val)
+})
+
+$backgrounds.addEventListener('change', () => {
+  const val = $backgrounds.options[$backgrounds.selectedIndex].value
+  socket.emit('setIntroBg', val)
 })
 
 scoreDivClose.addEventListener('click', ()=>{

@@ -9,6 +9,18 @@ body {
     overflow: hidden;
 }
 
+body.bg1 {
+  background-image: url('90sbg.png');
+}
+
+body.bg2 {
+  background-image: url('90sbg.jpeg');
+}
+
+body.bg3 {
+  background-image: url('bg3.jpg');
+}
+
 
 .center{
   position: absolute;
@@ -76,11 +88,19 @@ body {
     text-align: center;
     animation: colors 1s ease infinite alternate;
     background: linear-gradient(324deg, #1b2038, #514d94, #df4026, #d9c83d);
-    background-image: url('carlton.gif');
+    background-image: url('baby.gif');
     background-repeat: repeat;
 
 
     animation: introColors 30s ease infinite;
+}
+
+body.bg2 .intro {
+  background-image: url('carlton.gif');
+}
+
+body.bg3 .intro {
+  background-image: url('mchammer.gif');
 }
 
 .subtitle {

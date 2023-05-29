@@ -39,6 +39,10 @@ block content
             option(value=questionsCategories[x]) #{questionsCategories[x]}
         button.js-buzz-team-1.btn='Buzz Team 1'
         button.js-buzz-team-2.btn='Buzz Team 2'
+        select.js-backgrounds
+          - for (var x = 0; x < siteBackgrounds.length; x++)
+            option(value=siteBackgrounds[x]) #{siteBackgrounds[x]}
+
 
       div.js-view-question.view-question Question
       div.js-note.view-note Notes
