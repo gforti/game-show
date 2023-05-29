@@ -21,6 +21,8 @@ const $totalQuestions = document.querySelector('.js-totalQuestions')
 const timer = document.querySelector('.timer-host')
 const $skipTrack = document.querySelector('.js-skip-track')
 const $questionsCategories = document.querySelector('.js-categories')
+const $buzzTeam1 = document.querySelector('.js-buzz-team-1')
+const $buzzTeam2 = document.querySelector('.js-buzz-team-2')
 
 const answers = document.querySelector('.js-answers')
 const choices = document.querySelector('.js-choices')
@@ -91,6 +93,13 @@ logo.addEventListener('click', () => {
   socket.emit('logo')
 })
 
+$buzzTeam1.addEventListener('click', () => {
+  socket.emit('buzz', {team:1})
+})
+
+$buzzTeam2.addEventListener('click', () => {
+  socket.emit('buzz', {team:2})
+})
 
 pause.addEventListener('click', pauseTimer)
 music.addEventListener('click', toogleMusic)
@@ -224,8 +233,7 @@ function updateScoreBoard() {
     let teamInfo = {'unanswerd': 0}
     let html = ''
     Object.values(score).forEach( (data) => {
-
-        if (data.team.length && !teamInfo.hasOwnProperty(data.team)){
+        if (!isNaN(data.team) && !teamInfo.hasOwnProperty(data.team)){
             teamInfo[data.team] = []
         }
 
@@ -306,6 +314,8 @@ socket.on('score', (answer, data) => {
     if ( data.choices && data.choices.length ) {
         lock.disabled = false
         reveal.disabled = false
+        $buzzTeam1.disabled = false
+        $buzzTeam2.disabled = false
         viewquestion.innerHTML = `${data.question} <div class="es"> ${data.questionES || ''}</div>`
         note.innerHTML = data.note
         QTime = Math.ceil(data.question.split(" ").length/3)+2
@@ -353,6 +363,8 @@ function disableChoice() {
     lock.disabled = true
     logo.disabled = true
     reveal.disabled = true
+    $buzzTeam1.disabled = true
+    $buzzTeam2.disabled = true
     document.querySelectorAll('input[name="answer"]').forEach( (input) =>{
         input.disabled = true
     })
@@ -362,6 +374,8 @@ function enableChoice() {
     lock.disabled = false
     logo.disabled = false
     reveal.disabled = false
+    $buzzTeam1.disabled = false
+    $buzzTeam2.disabled = false
     // question.disabled = false
     document.querySelectorAll('input[name="answer"]').forEach( (input) =>{
         input.disabled = false

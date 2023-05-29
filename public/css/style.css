@@ -554,11 +554,15 @@ div.show-scores button.btn {
 }
 
 .display-scores div p:nth-child(2) {
-    color: rgb(14, 230, 14);
+    color: green;
 }
 
 .display-scores div p:nth-child(3) {
     color: red;
+}
+
+.display-scores div:last-child p:nth-child(2) {
+  color: rgb(14, 230, 14);
 }
 
 .display-scores div:last-child {
