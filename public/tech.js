@@ -228,12 +228,15 @@ function showScores() {
     updateScoreBoard()
 }
 
+function isWholeNumber(num) {
+  return /^\d+$/.test(num)
+}
 
 function updateScoreBoard() {
     let teamInfo = {'unanswerd': 0}
     let html = ''
     Object.values(score).forEach( (data) => {
-        if (!isNaN(data.team) && !teamInfo.hasOwnProperty(data.team)){
+        if (isWholeNumber(data.team) && !teamInfo.hasOwnProperty(data.team)){
             teamInfo[data.team] = []
         }
 
