@@ -242,7 +242,10 @@ function updateScoreBoard() {
     })
 
     const unanswerd = teamInfo['unanswerd']
-    html += `<div><p>Unanswerd: ${unanswerd}</p></div>`
+    const numCorrect = Object.values(score).filter(q => q.correct).length
+    const numIncorrect = Object.values(score).filter(q => !q.correct).length
+
+    html += `<div><p>Unanswerd: ${unanswerd}</p> <p>Correct: ${numCorrect}</p> <p>InCorrect: ${numIncorrect}</p></div>`
     scoreDivDisplay.innerHTML = html
 }
 

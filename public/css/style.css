@@ -554,7 +554,7 @@ div.show-scores button.btn {
 }
 
 .display-scores div p:nth-child(2) {
-    color: green;
+    color: rgb(14, 230, 14);
 }
 
 .display-scores div p:nth-child(3) {
@@ -562,7 +562,7 @@ div.show-scores button.btn {
 }
 
 .display-scores div:last-child {
-    background-color: #713C03;
+    background-color: #000;
 }
 
 .display-scores div:last-child p:nth-child(1) {
