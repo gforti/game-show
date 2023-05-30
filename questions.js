@@ -14,6 +14,7 @@ module.exports = {
     ],
     answer: "1998",
     note: '',
+    img: "/img/google.jpeg",
     time: 10,
     lock: false
   }
@@ -29,6 +30,7 @@ module.exports = {
     ],
     answer: "Harry Potter",
     note: '',
+    img: "/img/harry.jpeg",
     time: 10,
     lock: false
   }
@@ -44,6 +46,7 @@ module.exports = {
     ],
     answer: "1990",
     note: '',
+    img: "/img/hubble.jpeg",
     time: 10,
     lock: false
   }
@@ -59,6 +62,7 @@ module.exports = {
     ],
     answer: "Nelson Mandela",
     note: '',
+    img: "/img/Nelson.jpeg",
     time: 10,
     lock: false
   }
@@ -74,6 +78,7 @@ module.exports = {
     ],
     answer: "1991",
     note: '',
+    img: "/img/web.jpeg",
     time: 10,
     lock: false
   }
@@ -83,12 +88,13 @@ module.exports = {
     questionES: "¿Quién actuó en el Superbowl de 1993?",
     choices: [
       "Gloria Estefan",
-      "Diana Ross",
+      "Whitney Houston",
       "Michael Jackson",
       "Boyz II Men",
     ],
     answer: "Michael Jackson",
     note: '',
+    img: "/img/Super.jpeg",
     time: 10,
     lock: false
   }
@@ -104,6 +110,7 @@ module.exports = {
     ],
     answer: '1994',
     note: '',
+    img: "/img/chase.avif",
     time: 10,
     lock: false
   }
@@ -119,6 +126,7 @@ module.exports = {
     ],
     answer: "Barcelona, Spain",
     note: '',
+    img: "/img/dream.jpeg",
     time: 10,
     lock: false
   }
@@ -134,6 +142,7 @@ module.exports = {
     ],
     answer: "1992-1994, 1996-1998",
     note: '',
+    img: '/img/jordan.jpg',
     time: 10,
     lock: false
   }
@@ -148,11 +157,12 @@ module.exports = {
     choices: [
       "Animaniacs",
       "Ren and Stimpy",
-      "The Wild Thornberries",
+      "Pinky and the Brain",
       "The Powerpuff Girls",
     ],
-    answer: "Ren and Stimpy",
+    answer: "Pinky and the Brain",
     note: "",
+    img: "/img/pinky.jpeg",
     time: 10,
     lock: false
   }
@@ -168,6 +178,7 @@ module.exports = {
     ],
     answer: "It's Not Unusual by Gordon Mills and Les Reed",
     note: "",
+    img: "/img/dance.gif",
     time: 10,
     lock: false
   }
@@ -183,6 +194,7 @@ module.exports = {
     ],
     answer: "Stefan Urquelle",
     note: "",
+    img: "/img/steve.gif",
     time: 10,
     lock: false
   }
@@ -198,6 +210,7 @@ module.exports = {
     ],
     answer: "9",
     note: "",
+    img: "/img/seinfeld.jpeg",
     time: 10,
     lock: false
   }
@@ -213,6 +226,7 @@ module.exports = {
     ],
     answer: "Chemical X",
     note: "",
+    img: "/img/powerpuff.jpg",
     time: 10,
     lock: false
   }
@@ -228,6 +242,7 @@ module.exports = {
     ],
     answer: "Chandler",
     note: "",
+    img: "/img/friends.webp",
     time: 10,
     lock: false
   }
@@ -243,6 +258,7 @@ module.exports = {
     ],
     answer: "Bayside High School",
     note: "",
+    img: "/img/bell.webp",
     time: 10,
     lock: false
   }
@@ -258,6 +274,7 @@ module.exports = {
     ],
     answer: "Sunnydale",
     note: "",
+    img: "/img/buffy.webp",
     time: 10,
     lock: false
   }
@@ -273,6 +290,7 @@ module.exports = {
     ],
     answer: "Bart Simpson",
     note: "",
+    img: "/img/shorts.webp",
     time: 10,
     lock: false
   }
@@ -291,6 +309,7 @@ module.exports = {
     ],
     answer: "Titanic",
     note: "",
+    img: "/img/titanic.jpeg",
     time: 10,
     lock: false
   }
@@ -306,6 +325,7 @@ module.exports = {
     ],
     answer: "Isla Nublar",
     note: "",
+    img: "/img/park.jpeg",
     time: 10,
     lock: false
   }
@@ -319,6 +339,7 @@ module.exports = {
     ],
     answer: "Red Pill",
     note: "",
+    img: "/img/pill.avif",
     time: 10,
     lock: false
   }
@@ -334,6 +355,7 @@ module.exports = {
     ],
     answer: "The Lion King",
     note: "",
+    img: "/img/king.jpeg",
     time: 10,
     lock: false
   }
@@ -349,6 +371,7 @@ module.exports = {
     ],
     answer: "Jumanji",
     note: "",
+    img: "/img/jumanji.jpeg",
     time: 10,
     lock: false
   }
@@ -364,6 +387,7 @@ module.exports = {
     ],
     answer: "Pierce Brosnan",
     note: "",
+    img: "/img/bond.avif",
     time: 10,
     lock: false
   }
@@ -377,8 +401,9 @@ module.exports = {
       "...life was like a box of chocolates, you never know what you’re gonna get.",
       "...life was like a box of chocolates, you never do know what you are going to get.",
     ],
-    answer: "",
+    answer: "...life was like a box of chocolates, you never know what you’re gonna get.",
     note: "",
+    img: "/img/gump.webp",
     time: 10,
     lock: false
   }
@@ -394,6 +419,7 @@ module.exports = {
     ],
     answer: "I Will Always Love You",
     note: "",
+    img: "/img/guard.jpeg",
     time: 10,
     lock: false
   }
@@ -409,6 +435,7 @@ module.exports = {
     ],
     answer: "Unchained Melody",
     note: "",
+    img: "/img/ghost.jpeg",
     time: 10,
     lock: false
   }

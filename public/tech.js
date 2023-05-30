@@ -25,6 +25,7 @@ const $questionsCategories = document.querySelector('.js-categories')
 const $backgrounds = document.querySelector('.js-backgrounds')
 const $buzzTeam1 = document.querySelector('.js-buzz-team-1')
 const $buzzTeam2 = document.querySelector('.js-buzz-team-2')
+const $showImg = document.querySelector('.js-show-img')
 
 const answers = document.querySelector('.js-answers')
 const choices = document.querySelector('.js-choices')
@@ -114,6 +115,7 @@ testQuestion.addEventListener('click', showTestQuestion)
 scoreBtn.addEventListener('click', showScores)
 $skipTrack.addEventListener('click', skipTrack)
 $skipIntroTrack.addEventListener('click', skipIntroTrack)
+$showImg.addEventListener('click', showImg)
 
 $questionsCategories.addEventListener('change', () => {
   const val = $questionsCategories.options[$questionsCategories.selectedIndex].value
@@ -230,6 +232,10 @@ function showTestQuestion() {
     socket.emit('questionClose')
 }
 
+function showImg() {
+  socket.emit('showImg')
+}
+
 function showScores() {
 
     if ( !scoreDiv.classList.contains('hidden') ) {
@@ -326,6 +332,7 @@ socket.on('score', (answer, data) => {
     choices.innerHTML = ''
     viewquestion.innerHTML = ''
     note.innerHTML = ''
+    $showImg.disabled = data.img ? false : true
     if ( data.choices && data.choices.length ) {
         lock.disabled = false
         reveal.disabled = false
@@ -353,6 +360,7 @@ socket.on('score', (answer, data) => {
          clearTimeout(QTimer)
          QTimer = setTimeout(countdown, Q_DELAY)
     }
+
 }
 
 

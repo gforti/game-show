@@ -8,6 +8,7 @@ const intro = document.querySelector('.js-intro')
 const container = document.querySelector('.js-container')
 const card = document.querySelector('.js-card')
 const cardBack = document.querySelector('.js-back')
+const $showImg = document.querySelector('.js-show-img')
 
 let correctAnswer = ''
 let chosenAnswer = null
@@ -137,6 +138,10 @@ socket.on('setBG', (bgClass) => {
 
   const num = (bgClass.match(/\d/g).at(0) - 1)
   setIntroTrack(num)
+})
+
+socket.on('showImgtoggle', () => {
+  $showImg.toggleAttribute('hidden')
 })
 
 
@@ -272,6 +277,13 @@ function displayChoices(data) {
     info.innerHTML = ''
     answers.innerHTML = ''
     question.innerHTML = ''
+
+    $showImg.innerHTML = ''
+    $showImg.toggleAttribute('hidden', true)
+    if(data.img && data.img.length) {
+      $showImg.innerHTML = `<img src="${data.img}" />`
+    }
+
     chosenAnswer = null
     if ( data.choices && data.choices.length ) {
         correctAnswer = data.answer

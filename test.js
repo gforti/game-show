@@ -10,6 +10,7 @@ module.exports = [
     ],
     answer: "Hats / Sombreros",
     note: '',
+    img: "/img/jordan.jpg",
     time: 10,
     lock: false
   }
@@ -25,6 +26,7 @@ module.exports = [
     ],
     answer: "Times Square",
     note: "",
+    img: "",
     time: 10,
     lock: false
   }
@@ -40,6 +42,7 @@ module.exports = [
     ],
     answer: "Ruben Studdard",
     note: '',
+    img: "",
     time: 10,
     lock: false
   }

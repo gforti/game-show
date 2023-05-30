@@ -369,3 +369,22 @@ li.correct{
 .correct {
     color: lawngreen;
 }
+
+
+.show-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.show-img[hidden] {
+  display: none;
+}
+
+.show-img img {
+  max-width: 90vw;
+  max-height: 90vh;
+}

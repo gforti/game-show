@@ -43,7 +43,7 @@ block content
         select.js-backgrounds
           - for (var x = 0; x < siteBackgrounds.length; x++)
             option(value=siteBackgrounds[x]) #{siteBackgrounds[x]}
-
+        button.js-show-img.btn(disabled)='Toggle Image'
 
       div.js-view-question.view-question Question
       div.js-note.view-note Notes
