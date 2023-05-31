@@ -26,6 +26,7 @@ const $backgrounds = document.querySelector('.js-backgrounds')
 const $buzzTeam1 = document.querySelector('.js-buzz-team-1')
 const $buzzTeam2 = document.querySelector('.js-buzz-team-2')
 const $showImg = document.querySelector('.js-show-img')
+const $showScores = document.querySelector('.js-public-scores')
 
 const answers = document.querySelector('.js-answers')
 const choices = document.querySelector('.js-choices')
@@ -102,6 +103,10 @@ $buzzTeam1.addEventListener('click', () => {
 
 $buzzTeam2.addEventListener('click', () => {
   socket.emit('buzz', {team:2})
+})
+
+$showScores.addEventListener('click', () => {
+  socket.emit('showScores', score)
 })
 
 pause.addEventListener('click', pauseTimer)
@@ -251,7 +256,7 @@ function isWholeNumber(num) {
 }
 
 function updateScoreBoard() {
-    let teamInfo = {'unanswerd': 0}
+    let teamInfo = {'unanswered': 0}
     let html = ''
     Object.values(score).forEach( (data) => {
         if (isWholeNumber(data.team) && !teamInfo.hasOwnProperty(data.team)){
@@ -261,20 +266,20 @@ function updateScoreBoard() {
         if (teamInfo.hasOwnProperty(data.team))
             teamInfo[data.team].push({correct:data.correct})
         else
-            teamInfo['unanswerd']++
+            teamInfo['unanswered']++
     })
 
-    Object.keys(teamInfo).filter( key => key!== 'unanswerd').forEach( (team) => {
+    Object.keys(teamInfo).filter( key => key!== 'unanswered').forEach( (team) => {
         const correct = teamInfo[team].filter(data => data.correct).length
         const incorrect = teamInfo[team].filter(data => !data.correct).length
         html += `<div><p>Team ${team}</p> <p>Correct: ${correct}</p><p>Incorrect: ${incorrect}</p></div>`
     })
 
-    const unanswerd = teamInfo['unanswerd']
+    const unanswered = teamInfo['unanswered']
     const numCorrect = Object.values(score).filter(q => q.correct).length
     const numIncorrect = Object.values(score).filter(q => !q.correct).length
 
-    html += `<div><p>Unanswerd: ${unanswerd}</p> <p>Correct: ${numCorrect}</p> <p>InCorrect: ${numIncorrect}</p></div>`
+    html += `<div><p>Unanswered: ${unanswered}</p> <p>Correct: ${numCorrect}</p> <p>InCorrect: ${numIncorrect}</p></div>`
     scoreDivDisplay.innerHTML = html
 }
 

@@ -231,6 +231,10 @@ io.on('connection', (socket) => {
     io.sockets.emit('showImgtoggle')
   })
 
+  socket.on('showScores', (score) => {
+    io.sockets.emit('showScoresToggle', score)
+  })
+
   socket.on('updateCategory', (topic) => {
     questions = questionData[topic]
     data.totalQuestions = questions.length
