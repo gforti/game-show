@@ -13,7 +13,12 @@ const host_ip = require('./host-ip')
 var gameUrl = `http://${host_ip}:${port}`
 
 let questionData = require('./questions')
+
 let questionsCategories = Object.keys(questionData)
+//shuffle
+questionsCategories.forEach(key => {
+  questionData[key] = shuffle(questionData[key])
+})
 let questions = questionData[questionsCategories.at(0)]
 let testQuestions = require('./test')
 let currentTestQuestion = -1

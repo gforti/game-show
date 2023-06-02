@@ -147,6 +147,22 @@ module.exports = {
     lock: false
   }
   ,
+  {
+    question: "What was the minimum hourly wage raised to in 1997?",
+    questionES: "¿A cuánto se elevó el salario mínimo por hora en 1997?",
+    choices: [
+      "$5.15",
+      "$4.90",
+      "$7.25",
+      "$3.50",
+    ],
+    answer: "$5.15",
+    note: '',
+    img: '',
+    time: 10,
+    lock: false
+  }
+  ,
 
 ],
 
@@ -295,6 +311,22 @@ module.exports = {
     lock: false
   }
   ,
+  {
+    question: "The friendly neighbor of Tim Taylor. who often came to for advice.",
+    questionES: "El amistoso vecino de Tim Taylor. que venía a menudo en busca de consejo.",
+    choices: [
+      "Wilson",
+      "Bill",
+      "John",
+      "Arthur"
+    ],
+    answer: "Wilson",
+    note: "",
+    img: "/img/wilson.jpeg",
+    time: 10,
+    lock: false
+  }
+  ,
 ],
 
 "Movies": [
@@ -404,6 +436,22 @@ module.exports = {
     answer: "...life was like a box of chocolates, you never know what you’re gonna get.",
     note: "",
     img: "/img/gump.webp",
+    time: 30,
+    lock: false
+  }
+  ,
+  {
+    question: "What song is featured in the movie \"Ghost\"?",
+    questionES: "¿Qué canción aparece en la película \"Ghost\"?",
+    choices: [
+      "Unchained Love",
+      "Unbridled Love",
+      "Unrestrained Melody",
+      "Unchained Melody"
+    ],
+    answer: "Unchained Melody",
+    note: "",
+    img: "/img/ghost.jpeg",
     time: 10,
     lock: false
   }
@@ -425,17 +473,17 @@ module.exports = {
   }
   ,
   {
-    question: "What song is featured in the movie \"Ghost\"?",
-    questionES: "¿Qué canción aparece en la película \"Ghost\"?",
+    question: "What 90s film is famous for its 23-minute long graphic war scene?",
+    questionES: "¿Qué película de los 90 es famosa por su escena de guerra gráfica de 23 minutos de duración?",
     choices: [
-      "Unchained Love",
-      "Unbridled Love",
-      "Unrestrained Melody",
-      "Unchained Melody"
+      "Saving Private Ryan",
+      "Three Kings",
+      "Braveheart",
+      "G.I. Jane"
     ],
-    answer: "Unchained Melody",
+    answer: "Saving Private Ryan",
     note: "",
-    img: "/img/ghost.jpeg",
+    img: "/img/ryan.jpg",
     time: 10,
     lock: false
   }
